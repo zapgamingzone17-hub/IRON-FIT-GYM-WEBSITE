@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+
+/* ================= NAVBAR ================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(8, 8, 8, 0.75);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #222;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+nav h2::first-letter {
+    color: #b6ff00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #b6ff00;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section {
+    max-width: 1200px;
+    min-height: 100vh;
+    margin: auto;
+    padding: 120px 25px 80px;
+}
+
+section > h2 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+
+
+/* ================= HERO ================= */
+
+#home {
+    max-width: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #1c2600, transparent 45%),
+        #080808;
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.hero-content > p:first-child {
+    color: #b6ff00;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.95;
+    margin: 25px 0;
+
+    letter-spacing: -4px;
+}
+
+.hero-content h1::first-line {
+    color: white;
+}
+
+.hero-content p {
+    color: #999;
+    font-size: 18px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 30px;
+    padding: 15px 35px;
+
+    background: #b6ff00;
+    color: #000;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 50px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(182, 255, 0, 0.3);
+}
+
+
+/* ================= ABOUT ================= */
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#about p {
+    max-width: 750px;
+    margin: auto;
+
+    color: #999;
+    font-size: 19px;
+}
+
+
+/* ================= PROGRAMS ================= */
+
+.programs-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.program {
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid #292929;
+    border-radius: 20px;
+
+    transition: 0.4s;
+}
+
+.program:hover {
+    transform: translateY(-10px);
+    border-color: #b6ff00;
+    background: rgba(182, 255, 0, 0.05);
+}
+
+.program h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.program p {
+    color: #888;
+}
+
+
+/* ================= PLANS ================= */
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.plan {
+    padding: 40px 30px;
+
+    background: #111;
+
+    border: 1px solid #292929;
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+}
+
+.plan:nth-child(2) {
+    border: 2px solid #b6ff00;
+    transform: scale(1.05);
+}
+
+.plan h3 {
+    font-size: 25px;
+}
+
+.plan h4 {
+    font-size: 32px;
+    margin: 20px 0;
+
+    color: #b6ff00;
+}
+
+.plan p {
+    color: #888;
+    margin: 10px 0;
+}
+
+
+/* ================= CONTACT ================= */
+
+form {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+textarea {
+    padding: 17px;
+
+    background: #111;
+    color: white;
+
+    border: 1px solid #292929;
+    border-radius: 10px;
+
+    font-size: 16px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #b6ff00;
+}
+
+textarea {
+    height: 160px;
+    resize: none;
+}
+
+button {
+    padding: 16px;
+
+    background: #b6ff00;
+    color: #000;
+
+    border: none;
+    border-radius: 50px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    padding: 35px;
+    text-align: center;
+
+    background: #050505;
+    color: #666;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        padding: 15px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    section > h2 {
+        font-size: 35px;
+    }
+
+    .programs-container,
+    .plans-container {
+        grid-template-columns: 1fr;
+    }
+
+    .plan:nth-child(2) {
+        transform: none;
+    }
+
+    .hero-content h1 {
+        letter-spacing: -2px;
+    }
+}
